@@ -1,0 +1,25 @@
+.books-page {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 24px;
+   align-items: start;
+   justify-content: start;
+   padding: 14px;
+}
+
+.empty-search {
+   min-height: calc(100vh - var(--header-height));
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.empty-search h3 {
+   margin-bottom: 8px;
+}
+
+.empty-search p {
+   color: var(--color-text-secondary);
+}

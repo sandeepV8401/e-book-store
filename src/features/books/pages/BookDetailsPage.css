@@ -1,0 +1,50 @@
+.book-details {
+    display: flex;
+    gap: 40px;
+    padding: 48px 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    align-items: flex-start;
+  
+}
+
+.details-image {
+    flex: 1;
+    width: 300px;
+    height: 420px;
+    flex-shrink: 0;
+}
+
+
+
+.details-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.details-content {
+    flex: 2;
+}
+
+.details-content h2 {
+    margin-bottom: 15px;
+}
+
+.details-content p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.price {
+    margin: 20px 0;
+    color: #0a8f3d;
+    font-size: 28px;
+}
+
+.details-actions {
+    display: flex;
+    gap: 18px;
+}

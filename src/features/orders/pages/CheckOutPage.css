@@ -1,0 +1,150 @@
+.checkout-page {
+    display: flex;
+    gap: 48px;
+    margin: 20px;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-sm);
+    transition: 0.2s ease;
+}
+
+.address {
+    padding: 0 12px;
+}
+
+.left-section:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+h4 {
+    margin-bottom: 4px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.payment-options label {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.payment-options label:hover {
+    background: var(--color-bg);
+    border-radius: var(--radius-sm);
+}
+
+.payment-options input[type="radio"] {
+    accent-color: var(--color-primary);
+}
+
+.right-section {
+    /* flex: 2; */
+    width:30%;
+    background: aqua;
+    padding: 12px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-sm);
+    transition: 0.2s ease;
+}
+.right-section:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.summary-item {
+    height: 36px;
+}
+
+.view-all-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.view-all-btn:hover {
+    text-decoration: underline;
+}
+
+.check-img img {
+    height: 26px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.pricing {
+    margin-top: 10px;
+}
+
+.edit-btn {
+    margin-left: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: color .2s ease;
+}
+
+.edit-btn:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+
+.address textarea, .address p {
+    width: 100%;
+    min-height: 70px;
+    margin-top: 8px;
+    padding: 10px;
+
+    font: inherit;
+    line-height: 1.5;
+
+    color: var(--color-text);
+    background: var(--color-bg);
+
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    resize: vertical;
+    outline: none;
+
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.address p{
+    background: none;
+}
+
+.address textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
