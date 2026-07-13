@@ -31,13 +31,25 @@ const CheckoutPage = () => {
   const remainingItems = totalItems - shownItems;
 
   const [showModal, setShowModal] = useState(false);
+  const [editState, setEditState] = useState(false);
+  const handleEdit = () => {
+    setEditState(true);
+  };
   const { placeOrder } = useOrders();
   const handlePlaceOrder = () => {
-      if (!address.trim()) {
-    alert("Please add your address in your profile before placing the order.");
-    Navigate("/profile");
-    return;
-  }
+    console.log("editState:", editState);
+
+    if (editState) {
+      alert("Please save your updated address before placing the order.");
+      return;
+    }
+    if (!address.trim()) {
+      alert(
+        "Please add your address in your profile before placing the order.",
+      );
+      Navigate("/profile");
+      return;
+    }
     const order = {
       id: Date.now(),
       items: checkOutItems,
@@ -54,10 +66,7 @@ const CheckoutPage = () => {
     clearCart();
     setShowModal(true);
   };
-  const [editState, setEditState] = useState(false);
-  const handleEdit = () => {
-    setEditState(true);
-  };
+
   const handleSaveAddress = () => {
     updateProfile({
       address,
