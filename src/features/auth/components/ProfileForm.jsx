@@ -6,14 +6,14 @@ import useAuth from "../hooks/useAuth";
 
 const ProfileForm = () => {
   const { profile, updateProfile } = useAuth();
-
+console.log("PROFILE PAGE",profile)
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isDirty },
   } = useForm();
-  const isProfileAdded = Boolean(profile.name);
+  const isProfileAdded = Boolean(profile.address);
   const onSubmit = (data) => {
     console.log(data);
     updateProfile(data);
@@ -21,6 +21,7 @@ const ProfileForm = () => {
   };
 
   useEffect(() => {
+    console.log("profile",profile)
     if (isProfileAdded) {
       reset(profile);
     }
