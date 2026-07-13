@@ -50,8 +50,8 @@ const OrdersPage = () => {
                   <p>
                     {formatOrderDate(order.orderDate)} • {order.paymentMethod}
                   </p>
-                  <h5>{profile.name}</h5>
-                  <p>Address: {profile.address}</p>
+                  <h5>{order.name}</h5>
+                  <p>Address: {order.address}</p>
                 </div>
 
                 <span

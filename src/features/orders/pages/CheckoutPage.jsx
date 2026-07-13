@@ -33,9 +33,15 @@ const CheckoutPage = () => {
   const [showModal, setShowModal] = useState(false);
   const { placeOrder } = useOrders();
   const handlePlaceOrder = () => {
+      if (!address.trim()) {
+    alert("Please add your address in your profile before placing the order.");
+    Navigate("/profile");
+    return;
+  }
     const order = {
       id: Date.now(),
       items: checkOutItems,
+      name: profile.name,
       address: address,
       paymentMethod: selectedPaymentMethod,
       amount: totalPrice.toFixed(2),
