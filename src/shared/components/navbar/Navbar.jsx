@@ -66,7 +66,7 @@ const Navbar = () => {
               <div className="dropdown">
                 <NavLink to="/profile">Profile</NavLink>
                 <NavLink to="/orders">Orders</NavLink>
-                <button>Logout</button>
+                {/* <button>Logout</button> */}
               </div>
             )}
           </div>
