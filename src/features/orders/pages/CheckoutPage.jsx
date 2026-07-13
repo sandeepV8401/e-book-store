@@ -68,6 +68,10 @@ const CheckoutPage = () => {
   };
 
   const handleSaveAddress = () => {
+    if (!address.trim()) {
+      alert("Address cannot be empty.");
+      return;
+    }
     updateProfile({
       address,
     });
