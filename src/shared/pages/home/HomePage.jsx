@@ -27,7 +27,23 @@ const HomePage = () => {
       <section className="carousel">
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
-          slidesPerView={5}
+           breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  }}
           spaceBetween={20}
           loop={true}
           autoplay={{
