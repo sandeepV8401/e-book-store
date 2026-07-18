@@ -6,6 +6,7 @@ import ConfirmModal from "../../../shared/components/confirmModal/ConfirmModal";
 import { useNavigate } from "react-router-dom";
 import useOrders from "../hooks/useOrders";
 import useAuth from "../../auth/hooks/useAuth";
+import { toast } from "react-toastify";
 
 const CheckoutPage = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] =
@@ -40,13 +41,13 @@ const CheckoutPage = () => {
     console.log("editState:", editState);
 
     if (editState) {
-      alert("Please save your updated address before placing the order.");
+      // alert("Please save your updated address before placing the order.");
+      toast.error("Please save your updated address before placing the order.");
       return;
     }
     if (!address.trim()) {
-      alert(
-        "Please add your address in your profile before placing the order.",
-      );
+      // alert(        "Please add your address in your profile before placing the order."      );
+       toast.error("Please add your address in your profile before placing the order.");
       Navigate("/profile");
       return;
     }
@@ -69,7 +70,9 @@ const CheckoutPage = () => {
 
   const handleSaveAddress = () => {
     if (!address.trim()) {
-      alert("Address cannot be empty.");
+      // alert("Address cannot be empty.");
+         toast.error("Address cannot be empty, please enter address and save it.");
+      
       return;
     }
     updateProfile({

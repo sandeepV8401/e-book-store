@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import AppRoutes from './routes/AppRoutes'
-
+import { useState } from "react";
+import AppRoutes from "./routes/AppRoutes";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <AppRoutes />
-  )
+    <>
+      <AppRoutes />
+      <ToastContainer />
+    </>
+  );
 }
 
-export default App
+export default App;
