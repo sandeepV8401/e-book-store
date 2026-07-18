@@ -963,3 +963,119 @@ ol {
     }
 
 }
+/* ======================================
+   PROFILE
+====================================== */
+
+@media (max-width: 992px) {
+
+    .profile-page {
+        padding: 24px 18px;
+    }
+
+    .profile-form {
+        width: 100%;
+        max-width: 480px;
+    }
+
+}
+
+/* ====================================== */
+
+@media (max-width: 768px) {
+
+    .profile-page {
+        min-height: auto;
+        padding: 24px 16px;
+    }
+
+    .profile-form {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-form input,
+    .profile-form textarea {
+        font-size: 15px;
+    }
+
+}
+
+/* ====================================== */
+
+@media (max-width: 576px) {
+
+    .profile-page {
+        padding: 18px 12px;
+    }
+
+    .profile-form {
+        width: 100%;
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-form h2 {
+        font-size: 22px;
+    }
+
+    .profile-form input,
+    .profile-form textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-box textarea {
+        min-height: 90px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+/* ======================================
+   <= 400px
+====================================== */
+
+@media (max-width: 400px) {
+
+    .profile-page {
+        padding: 12px 8px;
+    }
+
+    .profile-form {
+        padding: 16px 12px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-form input,
+    .profile-form textarea {
+        font-size: 13px;
+    }
+
+    .error-message {
+        font-size: 9px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+}
